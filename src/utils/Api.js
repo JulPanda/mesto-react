@@ -73,13 +73,21 @@ class Api {
       headers: this._headers,
     }).then(this._handleResponse);
   }
+
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked) {
+      return this.setCardLike(id);
+    } else {
+      return this.deleteCardLike(id);
+    }
+  }
 }
 
 const api = new Api({
-  url: 'https://nomoreparties.co/v1/cohort-62',
+  url: "https://nomoreparties.co/v1/cohort-62",
   headers: {
-    'content-type': 'application/json',
-    authorization: '13bee0f6-be28-45c8-b317-73da0bb635bc'
+    "content-type": "application/json",
+    authorization: "13bee0f6-be28-45c8-b317-73da0bb635bc",
   },
 });
 
