@@ -15,7 +15,7 @@ function ImagePopup(props) {
         ></button>
         <img
           className="popup__image"
-          src={props.card ? props.card.link : ``}
+          src={props.card?.link}
           alt={props.card ? props.card.name : ``}
         />
         <h3 className="popup__title-image">
