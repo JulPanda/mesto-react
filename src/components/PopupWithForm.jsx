@@ -20,7 +20,7 @@ function PopupWithForm(props) {
           name={`${props.name}`}
           id={`form-${props.name}`}
           onSubmit={props.onSubmit}
-          noValidate
+          //noValidate
         >
           {props.children}
 
